@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Inscription</title>
+ </head>
+ <body>
+ 
+   <form>
+ 
+     <h1>Formulaire d'inscription</h1>
+
+     <label for="txtNom">Nom:</label>
+     <input type="text" id="txtNom">
+     <br><br>
+    
+     <label for="txtMilieu">Nom du milieu:</label>
+     <input type="text" id="txtMilieu">
+     <br><br>
+     
+     <label for="txtFamille">Nom de famille:</label>
+     <input type="text" id="txtFamille">
+     <br><br>
+ 
+     <input type="button" id="btnInitiales" onclick="afficheInitiales()"  value="Affiche initiales">
+
+     <input type="button" id="btnComplet" onclick="afficheComplet()"  value="Affiche nom au complet">
+
+     <input type="button" id="btnUtilisateur" onclick="afficheUtilisateur()"  value="Affiche nom d'utilisateur">
+
+     <div id="divAffiche">
+ 
+     </div>
+ 
+     <script>
+         function afficheInitiales() {
+             var nomPre = document.getElementById("txtNom").value;
+             var nomMilieu = document.getElementById("txtMilieu").value;
+             var nomFamille = document.getElementById("txtFamille").value;
+             var affiche = document.getElementById("divAffiche");
+             var message = (nomPre[0].toUpperCase() + "." + nomMilieu[0].toUpperCase() + "." + nomFamille[0].toUpperCase())
+             affiche.innerHTML = message;
+             }
+            
+         function afficheComplet() {
+             var nomPre = document.getElementById("txtNom").value;
+             var nomMilieu = document.getElementById("txtMilieu").value;
+             var nomFamille = document.getElementById("txtFamille").value;
+             var affiche = document.getElementById("divAffiche");
+             var message = (nomPre + " " + nomMilieu + " " + nomFamille);
+             affiche.innerHTML = message;
+             }
+
+         function afficheUtilisateur() {
+             var nomPre = document.getElementById("txtNom").value;
+             var nomMilieu = document.getElementById("txtMilieu").value;
+             var nomFamille = document.getElementById("txtFamille").value;
+             var affiche = document.getElementById("divAffiche");
+             var message = (nomPre[0].toLowerCase() + nomMilieu[0].toLowerCase() + nomFamille.toLowerCase());
+             affiche.innerHTML = message;
+             }
+            
+    
+     </script>
+ 
+   </form>
+ 
+ </body>
+</html>
