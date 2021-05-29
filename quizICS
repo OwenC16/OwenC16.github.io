@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Quiz ICS</title>
+ </head>
+ <body>
+ 
+   <form>
+ 
+     <h1>Quiz ICS</h1>
+
+     <label for="txtUn">Quelle deux mots ensembles signifie internet?</label>
+     <input type="text" id="txtUn">
+     <br><br>
+    
+     <label for="txtDeux">La composante d'ordis qui stock les donnés temporaires s'appelle quoi?</label>
+     <input type="text" id="txtDeux">
+     <br><br>
+     
+     <label for="txtTrois">Qu'est ce qu'on appelle un nombre entier?</label>
+     <input type="text" id="txtTrois">
+     <br><br>
+ 
+      <label for="radGrade">Un white hat est une personne qui pirate un réseau informatique avec une intention malveillante ou criminelle.</label>
+      <br><br>
+     <input type="radio" name="vouf" value="radioVrai">Vrai
+     <input type="radio" name="vouf" value="radioFaux">Faux
+     <br><br>
+
+     <input type="button" id="btnResultats" onclick="afficheResultats()"  value="Affiche résultats">
+
+
+     <div id="divAffiche">
+ 
+     </div>
+ 
+     <script>
+         function afficheResultats() {
+            var un = document.getElementById("txtUn").value;
+            var deux = document.getElementById("txtDeux").value;
+            var trois = document.getElementById("txtTrois").value;
+            var affiche = document.getElementById("divAffiche");
+            var radiosVouf = document.getElementsByName("vouf").value;
+            if (un == "Interconnected Networks") {
+            var message = ("Question 1: ✓");
+            } else if (un == "Interconnected networks") {
+            var message = ("Question 1: ✓");
+            } else if (un == "interconnected networks") {
+            var message = ("Question 1: ✓");
+            } else {
+            var message = ("Question 1: X")
+            }
+            if (deux == "Ram") {
+            var message = ("Question 2: ✓");
+            } else if (deux == "ram") {
+            var message = ("Question 2: ✓");
+            } else if (deux == "Mémoire vive") {
+            var message = ("Question 2: ✓");
+            } else if (deux == "mémoire vive") {
+            var message = ("Question 2: ✓");
+            } else if (deux == "Memoire vive") {
+            var message = ("Question 2: ✓");
+            } else if (deux == "memoire vive") {
+            var message = ("Question 2: ✓");
+            } else {
+            var message = ("Question 2: X")
+            }
+            if (trois == "Integer") {
+            var message = ("Question 3: ✓");
+            } else if (trois == "integer") {
+            var message = ("Question 3: ✓"); 
+            } else {
+            var message = ("Question 3: X")
+            }
+            if (radiosVouf == radioVrai) {
+              var message = ("Question 4: X");
+            } else if (radiosVouf == radioFaux){
+              var message = ("Bravo! Aucune erreur")
+            }
+            affiche.innerHTML = message
+            }
+            
+    
+     </script>
+ 
+   </form>
+ 
+ </body>
+</html>
